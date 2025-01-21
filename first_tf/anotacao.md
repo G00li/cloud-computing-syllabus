@@ -103,7 +103,7 @@ O comando `terraform apply plan` é usado para aplicar um **plano de execução*
 
 2. Gera um novo plan
 ```
-Terraform apply -out=plan  
+Terraform plan -out=plan  
 ```
 
 3. Aplica o plan
