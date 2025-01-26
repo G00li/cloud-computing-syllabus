@@ -143,7 +143,7 @@
 2. **Delete the Cluster**:
    - If using Minikube:
      ```bash
-    minikube delete
+      minikube delete
      ```
    - If using Kind:
      ```bash
