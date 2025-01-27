@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: hashicorp/http-echo:0.2.3
+        args:
+          - "-text=Hello from the Backend!"
+        ports:
+          - containerPort: 5678
+        volumeMounts:
+          - mountPath: "/data"
+            name: backend-storage
+      volumes:
+      - name: backend-storage
+        persistentVolumeClaim:
+          claimName: backend-pvc
