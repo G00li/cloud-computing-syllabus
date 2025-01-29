@@ -19,7 +19,6 @@ resource "kubernetes_deployment" "odoo" {
           app = "odoo"
         }
       }
-
       spec {
         container {
           name  = "odoo"
@@ -27,25 +26,21 @@ resource "kubernetes_deployment" "odoo" {
           port {
             container_port = 8069
           }
-
           env {
             name  = "HOST"
-            value = "postgres-service"  # Name of the PostgreSQL service
+            value = "postgres-service"
           }
-
           env {
             name  = "USER"
-            value = "odoo"  # PostgreSQL username
+            value = "odoo"
           }
-
           env {
             name  = "PASSWORD"
-            value = "odoo"  # PostgreSQL password
+            value = "odoo"
           }
-
           env {
             name  = "DB_NAME"
-            value = "odoo"  # PostgreSQL database name
+            value = "odoo"
           }
 
           command = ["/bin/bash", "-c", "odoo -i base --xmlrpc-port=8069"]

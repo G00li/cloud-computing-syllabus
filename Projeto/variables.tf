@@ -1,21 +1,20 @@
-
 variable "namespace" {
-  description = "the namespace of app"
-  type        = string
+  description = "Name of namespace"
+  type = string
 }
 
-variable "client" {
-  description = "which client namespace will be used (Netflix, Meta, Rockstar)"
+variable "client_name" {
+  description = "The name of the client (Netflix, Meta, Rockstar)"
   type        = string
 }
 
 variable "environment" {
-  description = "which type of env (dev, qa, prod)"
+  description = "The environment (dev, qa, prod)"
   type        = string
 }
 
-variable "domain" {
-  description = "The app domain"
+variable "domain_name" {
+  description = "The domain name for the application"
   type        = string
 }
 
@@ -23,4 +22,16 @@ variable "replica_number" {
   description = "odoo replica number"
   type        = number
   default     = 1
+}
+
+variable "minikube_driver" {
+  default = "docker"
+}
+
+variable "minikube_cpus" {
+  default = 2
+}
+
+variable "minikube_memory" {
+  default = 4096
 }

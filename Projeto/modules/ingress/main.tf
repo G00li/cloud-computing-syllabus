@@ -28,4 +28,3 @@ resource "kubernetes_ingress_v1" "odoo_https" {
     }
   }
 }
-

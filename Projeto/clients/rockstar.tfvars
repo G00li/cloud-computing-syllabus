@@ -1,4 +1,4 @@
 client_name = "rockstar"
-namespaces = ["dev", "qa", "prod"]
+namespaces = "qa"
 domain = "rockstar.example.com"
 replica_count = 1
