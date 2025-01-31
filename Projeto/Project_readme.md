@@ -42,7 +42,7 @@
       - [ ] Project structure
       - [ ] Variable definitions and purposes
       - [ ] Deployment instructions
-      - [ ] Dependencies and prerequisites
+      - [ ] Dependencies and prerequisites  
 
   ## Deliverables
 
